@@ -1,0 +1,1 @@
+# Django_MSA_project
