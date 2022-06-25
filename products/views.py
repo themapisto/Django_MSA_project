@@ -17,20 +17,20 @@ class ProductViewSet(viewsets.ViewSet):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-    def retrieve(self, request, pk=None): # /api/products/<str:id>
+    def retrieve(self, request, pk=None):
         product= Product.objects.get(id=pk)
-        serializers = ProductSerializer(product)
-        return Response(serializers.data)
+        serializer = ProductSerializer(product)
+        return Response(serializer.data)
 
 
-    def update(self, request, pk=None): # /api/products/<str:id>
+    def update(self, request, pk=None):
         product = Product.objects.get(id=pk)
         serializer = ProductSerializer(instance=product, data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
 
-    def destroy(self, request, pk=None): # /api/products/<str:id>
+    def destroy(self, request, pk=None):
         product= Product.objects.get(id=pk)
         product.delete()
         return Response(status=status.HTTP_202_ACCEPTED)
