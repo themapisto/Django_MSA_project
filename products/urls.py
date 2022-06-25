@@ -23,7 +23,7 @@ urlpatterns = [
         'post': 'create'
     })),
     path('products/<str:pk>', ProductViewSet.as_view({
-        'get': 'retrive',
+        'get': 'retrieve',
         'put': 'update',
         'delete': 'destroy'
     })),
