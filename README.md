@@ -20,7 +20,9 @@ vim docker-compose.yml
 docker-compose up
 ```
 ## 4. WEB 서버 확인
-localhost:8000 접속 
+localhost:8000/api/products
+![image](https://user-images.githubusercontent.com/52188918/176075642-ab57647e-1434-42d4-a788-488b952d0a0b.png)
+
 # 장고페이지 뜨면 
 
 ## 5. DB migrate
