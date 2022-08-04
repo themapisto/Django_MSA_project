@@ -33,9 +33,12 @@ python manage.py migrate
 [POST 방식 ]
 http://3.145.116.119:8000/api/products
 
-Header - Content-type : application/json
-body - raw
-
+### Header
+- Content-type : application/json
+### body 
+- raw
+- "title", "image" key값 : value값 
+- 예시
 {
     "title": "title",
     "image": "image"
